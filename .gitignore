@@ -34,3 +34,4 @@ captures/
 #Project
 workspace.xml
 tasks.xml
+.idea/libraries/
