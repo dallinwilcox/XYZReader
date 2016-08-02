@@ -153,10 +153,12 @@ public class ArticleListActivity extends AppCompatActivity implements
                             DateUtils.FORMAT_ABBREV_ALL).toString()
                             + " by "
                             + mCursor.getString(ArticleLoader.Query.AUTHOR));
+            String thumbUrl = mCursor.getString(ArticleLoader.Query.THUMB_URL);
             Context context = holder.thumbnailView.getContext();
-            Glide.with(context)
-                    .load(mCursor.getString(ArticleLoader.Query.THUMB_URL))
+            Glide.with(context) //Problem is with view height
+                    .load(thumbUrl)
                     .centerCrop()
+                    .placeholder(R.color.photo_placeholder)
                     .into(holder.thumbnailView);
        }
 
