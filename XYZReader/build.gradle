@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0-alpha6'
+        classpath 'com.android.tools.build:gradle:2.2.0-alpha7'
     }
 }
 apply plugin: 'com.android.application'
@@ -19,7 +19,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 23
     }
 }
